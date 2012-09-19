@@ -14,8 +14,18 @@ object Main {
   /**
    * Exercise 1
    */
-  def pascal(c: Int, r: Int): Int = ???
+/*  def pascal(c: Int, r: Int): Int = ???*/
 
+  def pascal(c : Int , r : Int) : Int = 
+    innerPascal(r , c)
+
+      
+  def innerPascal(r:Int, c:Int) : Int = 
+    if (c == 0) 
+      1 
+    else 
+      innerPascal(r, c-1) * (r-c)/c
+      
   /**
    * Exercise 2
    */
